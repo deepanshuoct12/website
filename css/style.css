@@ -1,0 +1,209 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+}
+body{
+    font-family: raleway,
+    sans-serif;
+}
+p{
+    line-height: 2;
+}
+.wrapper{
+    max-width: 1024;
+    margin: 0 auto;
+}
+/* header */
+header{
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;   /* use flex boxes to arrange items on the screen,here we set the display of parent element(header) to felex*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;/* by default flex direction is set to row to make it to column we did it*/
+    color: white;
+
+}
+.main-video{
+    position: absolute;
+    min-width: 100vh;
+    min-width: 100%;
+      z-index: -100;
+
+}
+h1{
+    margin:16px;
+    letter-spacing: 4px;
+    font-size: 48px;
+    font-weight: 400;
+
+}
+.btn{
+    background: #23b5b5;
+    color: #000;
+    padding: 12px;
+    min-width: 160px; 
+    text-align: center;
+    font-weight: 900;
+    text-decoration: none; /* this is used to remove underline*/
+    margin-top: 16px;
+    border: 1px solid #ffffff;
+}
+
+i{   /* this is here we access icon and set margin of icon left right 8px and up down 0 px*/
+    margin: 0 8px;
+}
+/*Navbar */
+.logo{
+    height: 50px;
+}
+.logo img{
+    height: 100%;
+}
+nav{
+height: 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 16px;
+max-width: 1024;
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 200;
+margin: 0 auto;
+transition: all .4s;
+}
+
+nav.scrolled {
+    background: white;
+    height: 50px;
+    box-shadow: 0 4px 10px -1px rgba(0,0,0,0.75);
+}
+
+nav.scrolled .desktop-nav li a {
+    color: black;
+}
+
+.desktop-nav{
+    display: flex;
+
+}
+
+.desktop-nav li {
+    list-style:none;  /*remove those dots*/
+    margin:0 16px;
+
+}
+.desktop-nav li a{
+color: white;
+text-decoration: none;
+}
+.desktop-nav li a:hover {
+    text-decoration: underline;
+}
+/* section*/
+section{
+    padding: 16px;
+    display: flex;
+}
+
+section .thumbnail img{
+    height: 320px;
+}
+h2{
+    margin: 8px 0;
+    background: #23b5b5;
+    width: 208px;
+    padding: 8px;
+  
+}
+/*Work section*/
+
+.work{
+    background: url('../images/water.jpg') #1b1b1b;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;      /*  for parallx effect*/
+}
+
+.active-work{
+    max-width: 700px;
+    position: relative;
+    margin: 0 auto;
+}
+.active-img-desc{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background:rgba(0,0,0,0.75);
+    padding: 16px;
+    color: white;
+}
+.active-work img,
+.work-gallery .img-card img{
+    width: 100%;
+    border: 2px solid white;
+}
+
+.work-gallery .img-card .img-desc{       /*dosent show description*/
+    display: none;
+}
+.work-gallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.work-gallery .img-card{
+    width: 200px;
+    margin: 8px;
+    cursor: pointer;
+
+}
+/* testimonial section*/
+.testimonials{
+flex-direction: column;
+
+}
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.testimonial img{
+    width: 150px;
+    border-radius: 50%;
+    margin: 24px;
+}
+
+h3{
+    margin: 8px;
+    font-weight: bolder;
+}
+/* contact form */
+.contact{
+    flex-direction: column;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact form input,
+.contact form textarea{
+    padding: 20px;
+    margin: 8px 0;
+    font-family:"Raleway" , sans-serif;
+   
+}
+.contact form input[type="submit"]
+{
+    background: black;
+    color: white;
+    border: none;
+
+}
